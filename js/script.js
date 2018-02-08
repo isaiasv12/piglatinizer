@@ -14,13 +14,16 @@ $(document).ready(function() {
 
 	$('#button').click(function() {
 		var input = $("#input").val();
+		debugger;
+		var words = input.split(" ");
 		console.log(input);
 	});
 });
-function converttopiglatin(input){
-	var words = input.split("");
-	for (var i=0; i<words.length,i++){
-		words[i]=converttopiglatin(words[i]);
+function converttopiglatin(words){
+	converttopiglatin("ar");
+	var words = input.split(" ");
+	for (var i = 0; i < words.length; i++) {
+		words[i] = converttopiglatin(words[i]);
 	}
 	return words.join("");
 	}
